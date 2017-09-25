@@ -1,0 +1,17 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: lenoConfig
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/LenoXian/config_repo
+          force-pull: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      default-zone: http://106.14.144.168:8761/eureka/
